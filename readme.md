@@ -1,7 +1,7 @@
 #masteryconnect.js [![Build Status](https://travis-ci.org/rockymadden/masteryconnect.js.png?branch=master)](http://travis-ci.org/rockymadden/masteryconnect.js)
 Functional wrapper for the MasteryConnect RESTful API. All publicly available functions are supported.
 
-## Depending
+## Depending Upon
 The project is available on the [Node Packaged Modules registry](https://npmjs.org/package/masteryconnect.js). Add the dependency in your package.json file:
 
 ```javascript
@@ -10,7 +10,7 @@ The project is available on the [Node Packaged Modules registry](https://npmjs.o
 }
 ```
 
-## Using
+## Usage
 Create a user, update user, delete user, and then logout:
 ```coffeescript
 student = student:
@@ -29,7 +29,7 @@ masteryconnect.withSession((session) ->
 
 NOTE: MasteryConnect uses a persisted token based authentication method and closing the session is not needed.
 
-## Licensing
+## License
 ```
 The MIT License (MIT)
 
