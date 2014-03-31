@@ -1,0 +1,32 @@
+{
+	"author": "Rocky Madden (http://rockymadden.com/)",
+	"dependencies": {
+		"bilby": "0.0.x",
+		"lazy.js": "0.3.x",
+		"oauth": "0.9.x",
+		"q": "0.9.x",
+		"truthy.js": "0.6.x"
+	},
+	"description": "Functional wrapper for the MasteryConnect RESTful API.",
+	"devDependencies": {
+		"coffee-script": "1.6.x",
+		"grunt": "0.4.x",
+		"grunt-cli": "0.1.x",
+		"grunt-contrib-coffee": "0.7.x",
+		"grunt-mocha-cov": "0.1.x",
+		"mocha": "1.15.x",
+		"mocha-term-cov-reporter": "0.2.x",
+		"should": "2.1.x"
+	},
+	"engines": {"node": ">=0.10.0"},
+	"homepage": "http://rockymadden.com/masteryconnect.js/",
+	"keywords": ["masterconnect", "education", "edtech"],
+	"main": "target/masteryconnect.js",
+	"name": "masteryconnect.js",
+	"repository": {"type": "git", "url": "git://github.com/rockymadden/masteryconnect.js.git"},
+	"scripts": {
+		"blanket": {"pattern": ["target/masteryconnect-test.js"]},
+		"prepublish": "grunt"
+	},
+	"version": "0.0.0"
+}
