@@ -35,6 +35,11 @@ describe('Http', ->
 				.then((_) -> _.getOrElse(null).length.should.be.above(0))
 				.done(-> done())
 		)
+		it('should work without id and with parameters', (done) ->
+			http.get('students', null, page: 1)
+			.then((_) -> _.getOrElse(null).length.should.be.above(0))
+			.done(-> done())
+		)
 		it('should work with id', (done) ->
 			# Hack because performance is poor against staging.
 			student = student:

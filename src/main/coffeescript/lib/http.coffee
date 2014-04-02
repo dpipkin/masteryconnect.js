@@ -35,15 +35,16 @@ http = class Http
 
 	withoutBody: (verb) => (entity, id, parameters) =>
 		deferred = q.defer()
-		url = @baseUrl + http.entityPath(entity, id) + http.querystring(parameters)
+		oauthUrl = @baseUrl + http.entityPath(entity, id)
+		requestUrl = oauthUrl + http.querystring(parameters)
 
-		oauth.authorization(verb, url, parameters, @consumerKey, @consumerSecret, @token, @tokenSecret).cata(
+		oauth.authorization(verb, oauthUrl, parameters, @consumerKey, @consumerSecret, @token, @tokenSecret).cata(
 			success: (auth) ->
 				authHeader = encode.authorizationHeader(auth)
 				request =
 					headers: 'Authorization': authHeader
 					method: verb
-					url: url
+					url: requestUrl
 
 				qio.request(request)
 					.then((_) -> _.body.read())
@@ -58,9 +59,10 @@ http = class Http
 
 	withBody: (verb) => (entity, id, payload, parameters) =>
 		deferred = q.defer()
-		url = @baseUrl + http.entityPath(entity, id) + http.querystring(parameters)
+		oauthUrl = @baseUrl + http.entityPath(entity, id)
+		requestUrl = oauthUrl + http.querystring(parameters)
 
-		oauth.authorization(verb, url, parameters, @consumerKey, @consumerSecret, @token, @tokenSecret).cata(
+		oauth.authorization(verb, oauthUrl, parameters, @consumerKey, @consumerSecret, @token, @tokenSecret).cata(
 			success: (auth) ->
 				authHeader = encode.authorizationHeader(auth)
 				json = JSON.stringify(payload)
@@ -71,7 +73,7 @@ http = class Http
 						'Content-Length': Buffer.byteLength(json, 'utf8')
 						'Content-Type': 'application/json'
 					method: verb
-					url: url
+					url: requestUrl
 					body: [json]
 
 				qio.request(request)
