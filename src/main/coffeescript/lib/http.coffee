@@ -39,7 +39,7 @@ http = class Http
 
 		oauth.authorization(verb, url, parameters, @consumerKey, @consumerSecret, @token, @tokenSecret).cata(
 			success: (auth) ->
-				authHeader = encode.authorizationHeader(auth).getOrElse('')
+				authHeader = encode.authorizationHeader(auth)
 				request =
 					headers: 'Authorization': authHeader
 					method: verb
@@ -62,7 +62,7 @@ http = class Http
 
 		oauth.authorization(verb, url, parameters, @consumerKey, @consumerSecret, @token, @tokenSecret).cata(
 			success: (auth) ->
-				authHeader = encode.authorizationHeader(auth).getOrElse('')
+				authHeader = encode.authorizationHeader(auth)
 				json = JSON.stringify(payload)
 				request =
 					charset: 'UTF-8'
