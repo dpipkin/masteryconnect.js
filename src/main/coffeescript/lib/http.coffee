@@ -16,8 +16,10 @@ http = class Http
 			catch
 				json = {}
 
-			if truthy.bool.objecty(json) and truthy.bool.lengthy(json) then bilby.some(json)
-			else bilby.none
+			if truthy.bool.objecty(json) and truthy.bool.lengthy(json)
+				bilby.some(json)
+			else
+				bilby.none
 
 	@querystring: (parameters) -> truthy.opt.lengthy(parameters).map((_) -> '?' + encode.url(_)).getOrElse('')
 
@@ -39,8 +41,7 @@ http = class Http
 			success: (auth) ->
 				authHeader = encode.authorizationHeader(auth).getOrElse('')
 				request =
-					headers:
-						'Authorization': authHeader
+					headers: 'Authorization': authHeader
 					method: verb
 					url: url
 
