@@ -20,10 +20,10 @@ student = student:
 
 masteryconnect.withSession((session) ->
 	session.postStudent(student)
-	.then((_) -> _.fold(((_) -> _.student.id), -1))
-	.then((id) -> session.putStudent(id, student: first_name: 'billy'); id)
-	.then((id) -> session.deleteStudent(id))
-	.done()
+		.then((_) -> _.fold(((_) -> _.student.id), -1))
+		.then((id) -> session.putStudent(id, student: first_name: 'billy'); id)
+		.then((id) -> session.deleteStudent(id))
+		.done()
 )
 ```
 

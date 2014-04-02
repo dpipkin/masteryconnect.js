@@ -5,9 +5,8 @@ script:
   - "grunt test"
 env:
   global:
-    - secure: "DMz0L1PyawJCZyMIuf6cZk0hPlLPzXaISgDf02hHdKM7uqWQQnow2sfforui6e5LhwCjvJ6NVFBBbcPADCWMMzDRPjzDlnbijyy0hhYfPAjkwL4OhGT6ZFQmn/piIJN7L8eAeuKT3Jm/GUmMvUegl+sBPYGtu0vO8El2kgI7KrQ="
-    - secure: "LWV/QYNRdvl9zsUWzh0pK24PzFWfQmRdhHDFidf+/QTKNB4wwUj0HRDrwiBU6RyVp49qF7O7MpY7CfW5c1/ltI1QBW3k9lq1Fmtw9c84WvoM9oEizrdKu4fPBX+MoftpvcUb5wr2LrumAjFxWlRbwPTQH6MkC+v9J5/GE7VH5Zk="
-    - secure: "HniqFadepvxVOzO3Hgw2vOLLvDaR/WuqcGfIe7Gvjl0isP7e87nPkrujGuzjysOseyrpUjNXiALntLgJ5K/9AU1mSxEkBw49OCkro6smPgbG9EsHGjs66XeHV/MMnq53vsXLzf+qV1tWyDVdpdulYp69dsuTNQDyyM3vb0pbWaY="
-    - secure: "kdps5X+jGEfnbGBacxDKZzxWhz29u5mvt1xJxlk7ZIl8i91R2R63kCqe4Bbw2Hf2XOJxL4NCCBXUpAxq+9EgFsBkltu/IWyITMF5rhPWL1px8XlzCgqxd0QlDdZPPaa/oMUnVsYKhmCTrWQIi4RcdauoVX1Kp36wkPiIv1naF44="
-    - secure: "hkLPD3xUQ7Qc8jXv1nPHNd84zOx0QqJl/2duOEmK2niSqMwgmvpkVzdn06umRue6mNLpmTNkTLmKcki24Yh8AnjO8ffpQRME+R0V3SC6P2MZ4E5Ag4cnh7VxShV3nqATIePkypsJhus+LwoSPX+p3kLe+Ad8On3yz6+pF0Epd0I="
-    - secure: "k4GU2xkgeH3rZHoN8GpSJK1xGQ14XDrDtWzyAm7OMlmnhIFZUBZR5OGpFbu35ia4yAG0U447YW20aGplD6JlxoVX/flQhlCuRdFjKVk/mG+SUUh933KC7qqldLR4a9A49boQ6q2y5CsX0Yr1m3xNt0nlJTLvz5BelKADz5+DJ2Q="
+    - secure: "Sk24VoOI5cz1rRWitRVuFii/nyW3Pccfzb0yBe+jwtxFLrs7wDJtwDiu/XxKZvehhSgiWIGWPq8Nod88vT+OwubOn28QVwvquqdX7PiS/pPn9cDTOdRreHQ6X/+kEq04iqpaCwKC3lDlx3m9Qe3ZZPRu9buVZajf8Mrm6LuvAus="
+    - secure: "d1hDqzauABUXXiQfDXiDzUtYw1p4nCSFbIc6oYT5QZz9twhodHNOLzeXpXvlo+3d+dXah3yNoxET3hOS+ikJcU+ENhfLtwDFz/Nhdt+oDBtXH6CkDjJtt+/oDULwxNVPMU375Rxxsn2l5dbzaVxBdPHEwoA8sxsr12k+kI1c84g="
+    - secure: "dyG2Jsh3iMufcFbT3cm5BSm9SfsQwjK4G2jIyCZpaE5bl4Us3bkWx53YLc5yCMlGl9w5Q6Y8b07e3bPwJxwgMROWUJVN9Cyl6ZpRc5Z6Ze913DdY5fiGaPBBPV12L9fc0CkeBw+eXS4mC4Y4QCwxtk/bcjzo1IK0rcSkTT8XiSA="
+    - secure: "Rr2FiM9t70Z+gAmszRBKU/biq0HJcX8q0QorLRL5t40gn+78q1mKmJjMm2xV2yctjn7OinLcQuyQyc6FX21ut4ORJkuMPvJAwkNmk4iemh02nqKqxzfnE0QtaCu70rRFIi7MXB2KCnqbjELH5dwEjb38+AFzxqet4BI8P/jwkr8="
+    - secure: "bHq1a1yTzu5P5U1DgQRYfSLoS7qRuFhMf085zZEO79PlMZGvCm5dWc4p6nMqwmFCG3VwxCeSGz7GzLITle5rCAMXtqlsc+ZSULLHc9PsjFhBXuFcCxws61QRFzJYnUElYia1dHBN4i9aIm+qa4DpmcbfBmYwmY9N3ZbzBrQKIEw="
