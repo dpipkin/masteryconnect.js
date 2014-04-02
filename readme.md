@@ -6,7 +6,7 @@ The project is available on the [Node Packaged Modules registry](https://npmjs.o
 
 ```javascript
 "dependencies": {
-	"masteryconnect.js": "0.0.x"
+	"masteryconnect.js": "0.1.x"
 }
 ```
 
