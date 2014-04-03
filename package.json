@@ -2,6 +2,7 @@
 	"author": "Rocky Madden (http://rockymadden.com/)",
 	"dependencies": {
 		"bilby": "0.0.x",
+		"keep-alive-agent": "0.0.x",
 		"lazy.js": "0.3.x",
 		"oauth-sign": "0.4.x",
 		"q": "0.9.x",

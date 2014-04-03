@@ -1,3 +1,4 @@
+Agent = require('keep-alive-agent')
 bilby = require('bilby')
 encode = require('./encode')
 oauth = require('./oauth')
@@ -24,6 +25,7 @@ http = class Http
 	@querystring: (parameters) -> truthy.opt.lengthy(parameters).map((_) -> '?' + encode.url(_)).getOrElse('')
 
 	constructor: (@baseUrl, @consumerKey, @consumerSecret, @token, @tokenSecret) ->
+		@agent = if @baseUrl.indexOf('https:') == 0 then new Agent().Secure() else new Agent()
 
 	delete: (entity, id, parameters) -> @withoutBody('DELETE')(entity, id, parameters)
 
@@ -42,6 +44,7 @@ http = class Http
 			success: (auth) ->
 				authHeader = encode.authorizationHeader(auth)
 				request =
+					agent: @agent
 					headers: 'Authorization': authHeader
 					method: verb
 					url: requestUrl
@@ -67,6 +70,7 @@ http = class Http
 				authHeader = encode.authorizationHeader(auth)
 				json = JSON.stringify(payload)
 				request =
+					agent: @agent
 					charset: 'UTF-8'
 					headers:
 						'Authorization': authHeader
