@@ -45,7 +45,9 @@ http = class Http
 				authHeader = encode.authorizationHeader(auth)
 				request =
 					agent: @agent
-					headers: 'Authorization': authHeader
+					headers:
+						'Authorization': authHeader
+						'User-Agent': 'masteryconnect.js'
 					method: verb
 					url: requestUrl
 
@@ -76,6 +78,7 @@ http = class Http
 						'Authorization': authHeader
 						'Content-Length': Buffer.byteLength(json, 'utf8')
 						'Content-Type': 'application/json'
+						'User-Agent': 'masteryconnect.js'
 					method: verb
 					url: requestUrl
 					body: [json]
