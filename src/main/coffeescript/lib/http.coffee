@@ -25,7 +25,7 @@ http = class Http
 	@querystring: (parameters) -> truthy.opt.lengthy(parameters).map((_) -> '?' + encode.url(_)).getOrElse('')
 
 	constructor: (@baseUrl, @consumerKey, @consumerSecret, @token, @tokenSecret) ->
-		@agent = if @baseUrl.indexOf('https:') == 0 then new Agent().Secure() else new Agent()
+		@agent = if @baseUrl.indexOf('https:') == 0 then new Agent.Secure() else new Agent()
 
 	delete: (entity, id, parameters) -> @withoutBody('DELETE')(entity, id, parameters)
 
